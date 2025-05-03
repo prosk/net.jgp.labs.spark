@@ -33,7 +33,7 @@ public class CsvWithDoubleHeaderToDataset {
         spark.read().schema(schema).option("inferSchema", "false")
             .option("comment", "#")
             .option("header", "true")
-            .option("mode", "DROPMALFORMED")
+            //.option("mode", "DROPMALFORMED")
             .csv(filename);
     df.show();
     df.printSchema();
